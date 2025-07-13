@@ -1,0 +1,13 @@
+services:
+    app:
+        build:
+            # the root directory that contains the Dockerfile
+            context: .
+            args:
+                - DEV=true
+        ports:
+            - "8080:8080"
+        volumes:
+            - "./app:/app"
+        command: >
+            sh -c "python manage.py runserver 0.0.0.0:8080"
