@@ -1,7 +1,6 @@
 services:
     app:
         build:
-            # the root directory that contains the Dockerfile
             context: .
             args:
                 - DEV=true
